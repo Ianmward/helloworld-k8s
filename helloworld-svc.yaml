@@ -1,17 +1,16 @@
-apiVersion: v1
-kind: Service
+apiVersion: "v1"
+kind: "Service"
 metadata:
-  creationTimestamp: null
+  name: "helloworld-1-service"
+  namespace: "default"
   labels:
-    run: helloworld
-  name: helloworld
+    app: "helloworld-1"
 spec:
   ports:
-  - port: 80
-    protocol: TCP
+  - protocol: "TCP"
+    port: 80
     targetPort: 8080
   selector:
-    run: helloworld
-  type: LoadBalancer
-status:
-  loadBalancer: {}
+    app: "helloworld-1"
+  type: "LoadBalancer"
+  loadBalancerIP: ""
