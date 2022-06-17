@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: helloworld
+  name: helloworld
+spec:
+  containers:
+  - image: us.gcr.io/testproject1-344106/cr-helloworld
+    name: helloworld
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
